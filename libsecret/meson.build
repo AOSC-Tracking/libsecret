@@ -337,6 +337,7 @@ if get_option('introspection')
         link_with: mock_service_lib,
         include_directories: config_h_dir,
         c_args: test_cflags + extra_cflags,
+        vala_args: ['--pkg-config=false'],
       )
 
       test(name, test_bin, suite: 'vala',
